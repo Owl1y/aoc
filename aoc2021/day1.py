@@ -12,15 +12,15 @@ for i, element in enumerate(mylist):
 print(M_Increase)
 
 sumlist = []
-testlist = [199, 200, 208, 210, 200, 207, 240, 269, 260,263]
 
+# everthing after this comment is for part 2 of the problem
 
 for j, element in enumerate(mylist):
     if j == 0:
         print("nope")
     else:
         sumlist.append(sum(mylist[j-1:j+2:1]))
-print(sumlist)
+#print(sumlist)
 
 sum_increase = 0
 
