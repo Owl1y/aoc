@@ -20,7 +20,7 @@ for j, element in enumerate(mylist):
     if j == 0:
         print("nope")
     else:
-        sumlist.append(sum(mylist[j-1:j+2:1]))
+        sumlist.append(sum(mylist[j-1:j+2]))
 
 for k, element in enumerate(sumlist):
     if k == 0:
