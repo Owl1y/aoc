@@ -5,17 +5,11 @@ with open("day2.txt", "r") as client_nums:
 total_wrap = []
 ribben_wrap = []
 for j in range(len(lines)):
-    # finding the x in the string to ignore them
-    s = lines[j]
-    c = 'x'
-    res = [pos for pos, char in enumerate(s) if char == c]
-
-    # getting the numbers from the string 
+    
+    #found at https://dev.to/jules_lewis/advent-of-code-2015-day-2-ek4
+    l, w, h = map(int, lines[j].split('x'))
+    
     lwh = []
-    l = int(lines[j][0:res[0]])
-    w = int(lines[j][res[0]+1:res[1]])
-    h = int(lines[j][res[1]+1:])
-
     dimension = 2*(l * w) + 2*(w * h) + 2*(h * l)
     
     #sorting the length width and height to multiply by the smallest two values 
