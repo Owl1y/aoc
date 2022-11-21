@@ -26,6 +26,5 @@ for j in range(len(lines)):
     ribben_total = ribben_bow + ribben
     ribben_wrap.append(ribben_total)
 
-
 print(sum(total_wrap))
 print(sum(ribben_wrap))
