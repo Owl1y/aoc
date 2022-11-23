@@ -26,7 +26,7 @@ def listToString(the_list):
     str1 = ""
     return (str1.join(the_list))
 
-
+# Part 1
 input = lines[0]
 part1 = cords_fun(input)
        
@@ -36,11 +36,6 @@ sorted_houses_list = map(list,sorted_houses)
 print(f"the houses santa goes to is {len(sorted_houses)}")
 
 # Part 2
-
-# input =  "^v"         # -> 3
-input =  "^>v<"       # -> 3
-# input =  "^v^v^v^v^v" # -> 11
-
 santa_list = []
 robo_list = []
 for n in range(len(input)):
@@ -49,24 +44,10 @@ for n in range(len(input)):
     else:
         robo_list.append(input[n])
 
-# print(f"entire input lenght {len(input)} \nsantas list {len(listToString(santa_list))} \nrobo list {len(listToString(robo_list))}")
-
 santas_houses = cords_fun(listToString(santa_list))
 robo_houses = cords_fun(listToString(robo_list))
-print(santa_list, robo_list)
 
 combined = santas_houses + robo_houses
-
-for swag in range(len(santas_houses)):
-    print(santas_houses[swag], robo_houses[swag] )
-
-santas_houses_cut = set(map(tuple,santas_houses))
-robo_houses_cut = set(map(tuple, robo_houses))
 combined_cut = set(map(tuple, combined))
 
-
-print(f"houses from robot and santa is {(len(santas_houses_cut) + len(robo_houses_cut)) - 1}")
-# its not 2498, 2499, 8193
-
-
-
+print(f"houses from robot and santa is {len(combined_cut)}")
