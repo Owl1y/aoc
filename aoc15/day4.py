@@ -12,7 +12,7 @@ while str(result.hexdigest())[0:5] != five0:
     x = x + 1
     input_num = bytes(input + str(x), 'utf-8')
     result = hashlib.md5(input_num)
-
+    # print(result.hexdigest())
 print(result.hexdigest())
 print(x)
 
