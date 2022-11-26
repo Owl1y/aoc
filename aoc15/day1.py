@@ -7,12 +7,12 @@ for j, i  in enumerate(data):
         sum = sum + 1
     elif i == ")":
         sum = sum - 1
-    if sum == -1:
+    if sum == -1: # for part 2, prints location each time its -1
         basement = j
-        print(basement)
+        print(basement + 1)
 
-#for j, element in enumerate(data):
 
 print("---break before sum---")
 print(sum)
 #print(basement)
+
