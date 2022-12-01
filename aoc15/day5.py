@@ -25,3 +25,8 @@ for i in range(len(lines)):
         nice_words = nice_words + 1 
 
 print(nice_words)
+
+# Part 2
+
+test = "qjhvhtzxzqqjkmpb"
+print(test.count('z'))
