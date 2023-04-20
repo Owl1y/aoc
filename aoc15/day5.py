@@ -21,12 +21,18 @@ for i in range(len(lines)):
     forb_let_cut = [*set(forb_let)] 
 
     if (len(cut_v) >= 3) and (len(double_let) >= 1) and (len(forb_let_cut) == 1):
-        print(f"{lines[i]}   {cut_v}    {double_let}   {len(double_let)}    {forb_let_cut}    {len(forb_let_cut)}")
+        #print(f"{lines[i]}   {cut_v}    {double_let}   {len(double_let)}    {forb_let_cut}    {len(forb_let_cut)}")
         nice_words = nice_words + 1 
 
 print(nice_words)
 
 # Part 2
+# I spent hours and hours on part two and gave in and went to the reddit to find the answer
+# using this post https://old.reddit.com/r/adventofcode/comments/3viazx/day_5_solutions/cxnt6bp/
 
-test = "qjhvhtzxzqqjkmpb"
-print(test.count('z'))
+count = sum(
+      1 for s in lines
+      if len(re.findall(r"([a-z]{2}).*\1", s))
+      and re.findall(r"([a-z]).\1", s)
+ )
+print(count)
